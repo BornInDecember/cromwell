@@ -22,7 +22,7 @@ task sum {
     Int sum = read_int(stdout())
   }
   runtime {
-    docker: "ubuntu:latest"
+    docker: "marketplace.gcr.io/google/ubuntu1804:latest"
   }
 }
 
@@ -34,7 +34,7 @@ task int_reader {
     cat ~{f}
   }
   runtime {
-    docker: "ubuntu:latest"
+    docker: "marketplace.gcr.io/google/ubuntu1804:latest"
   }
   output {
     Int int = read_int(stdout())
@@ -54,6 +54,6 @@ task glob_output {
   }
 
   runtime {
-    docker: "ubuntu:latest"
+    docker: "marketplace.gcr.io/google/ubuntu1804:latest"
   }
 }

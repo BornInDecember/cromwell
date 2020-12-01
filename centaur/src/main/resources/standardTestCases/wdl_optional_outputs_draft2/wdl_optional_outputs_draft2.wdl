@@ -12,7 +12,7 @@ task maybe_create_file {
         File? maybe = "maybe"
     }
     runtime {
-       docker: "ubuntu:latest"
+       docker: "marketplace.gcr.io/google/ubuntu1804:latest"
     }
 }
 
@@ -26,7 +26,7 @@ task more_complicated_maybe_file_tests {
         Map[String, File?] map_with_maybe_file_values = { "yes": "yes", "no": "no" }
     }
     runtime {
-        docker: "ubuntu:latest"
+        docker: "marketplace.gcr.io/google/ubuntu1804:latest"
     }
 }
 

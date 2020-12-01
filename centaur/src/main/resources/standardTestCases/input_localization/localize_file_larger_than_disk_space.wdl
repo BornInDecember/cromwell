@@ -8,7 +8,7 @@ task localize_file {
         cat "localizing file over 1 GB"
     }
     runtime {
-        docker: "ubuntu:latest"
+        docker: "marketplace.gcr.io/google/ubuntu1804:latest"
         disks: "local-disk 1 HDD"
     }
     output {

@@ -21,7 +21,7 @@ task read_file {
       cat ${input_file}
     }
     runtime {
-        docker: "ubuntu:latest"
+        docker: "marketplace.gcr.io/google/ubuntu1804:latest"
         backend: "Papi-Caching-No-Copy"
     }
     output {

@@ -19,7 +19,7 @@ $graph:
       # Workflow step-level DockerRequirement
       requirements:
         DockerRequirement:
-          dockerPull: "ubuntu:latest"
+          dockerPull: "marketplace.gcr.io/google/ubuntu1804:latest"
       run:
         inputs:
         - id: jamie

@@ -6,7 +6,7 @@ task boundToFail {
    String badOutput = read_string(stdout())
   }
   runtime {
-    docker: "ubuntu:latest"
+    docker: "marketplace.gcr.io/google/ubuntu1804:latest"
   }
 }
 
@@ -16,7 +16,7 @@ task shouldNotStart {
      echo ${str}
     }
     runtime {
-       docker: "ubuntu:latest"
+       docker: "marketplace.gcr.io/google/ubuntu1804:latest"
     }
 }
 
@@ -46,7 +46,7 @@ task shouldSucceed {
      echo ${str}
     }
     runtime {
-       docker: "ubuntu:latest"
+       docker: "marketplace.gcr.io/google/ubuntu1804:latest"
     }
     output {
      String stalling = read_string(stdout())
@@ -59,7 +59,7 @@ task delayedTask {
      echo ${str_2}
     }
     runtime {
-       docker: "ubuntu:latest"
+       docker: "marketplace.gcr.io/google/ubuntu1804:latest"
     }
     output {
      String delayedOut = read_string(stdout())

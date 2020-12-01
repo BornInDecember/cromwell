@@ -16,7 +16,7 @@ task read_file {
       cat ${input_file}
     }
     runtime {
-        docker: "ubuntu:latest"
+        docker: "marketplace.gcr.io/google/ubuntu1804:latest"
     }
     output {
         File out = stdout()

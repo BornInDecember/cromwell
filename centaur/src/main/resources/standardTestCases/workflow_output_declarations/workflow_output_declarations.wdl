@@ -4,7 +4,7 @@ task hello {
     echo "Hello ${addressee}!"
   }
   runtime {
-    docker: "ubuntu:latest"
+    docker: "marketplace.gcr.io/google/ubuntu1804:latest"
   }
   output {
     String salutation = read_string(stdout())

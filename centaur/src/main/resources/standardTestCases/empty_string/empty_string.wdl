@@ -6,7 +6,7 @@ task hello {
     String empty = ""
   }
   runtime {
-    docker: "ubuntu:latest"
+    docker: "marketplace.gcr.io/google/ubuntu1804:latest"
   }
 }
 
@@ -19,7 +19,7 @@ task goodbye {
     String empty = read_string(stdout())
   }
   runtime {
-   docker: "ubuntu:latest"
+   docker: "marketplace.gcr.io/google/ubuntu1804:latest"
   }
 }
 

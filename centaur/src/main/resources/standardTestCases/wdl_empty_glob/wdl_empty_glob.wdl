@@ -3,7 +3,7 @@ task empty_glob {
         echo "hello"
     }
     runtime {
-        docker: "ubuntu:latest"
+        docker: "marketplace.gcr.io/google/ubuntu1804:latest"
     }
     output {
         Array[File] empty_glob = glob("*.txt")

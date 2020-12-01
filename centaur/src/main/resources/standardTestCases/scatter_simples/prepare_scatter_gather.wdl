@@ -18,7 +18,7 @@ task do_prepare {
         Array[File] split_files = ["temp_aa", "temp_ab", "temp_ac", "temp_ad"]
     }
     runtime {
-      docker: "ubuntu:latest"
+      docker: "marketplace.gcr.io/google/ubuntu1804:latest"
     }
 }
 # count the number of words in the input file, writing the count to an output file overkill in this case, but simulates a real scatter-gather that would just return an Int (map)
@@ -35,7 +35,7 @@ task do_scatter {
         File count_file = "output.txt"
     }
     runtime {
-      docker: "ubuntu:latest"
+      docker: "marketplace.gcr.io/google/ubuntu1804:latest"
     }
 }
 # aggregate the results back together (reduce)
@@ -50,7 +50,7 @@ task do_gather {
       Int sum = read_int(stdout())
     }
     runtime {
-      docker: "ubuntu:latest"
+      docker: "marketplace.gcr.io/google/ubuntu1804:latest"
     }
 }
 

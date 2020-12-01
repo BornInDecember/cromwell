@@ -7,7 +7,7 @@ $graph:
   stdout: "hello.txt"
   requirements:
   - class: DockerRequirement
-    dockerPull: "ubuntu:latest"
+    dockerPull: "marketplace.gcr.io/google/ubuntu1804:latest"
   inputs:
       bonus:
           type: string[]

@@ -8,7 +8,7 @@ task size_task {
     File out = stdout()
   }
   runtime {
-    docker: "ubuntu:latest"
+    docker: "marketplace.gcr.io/google/ubuntu1804:latest"
   }
 }
 

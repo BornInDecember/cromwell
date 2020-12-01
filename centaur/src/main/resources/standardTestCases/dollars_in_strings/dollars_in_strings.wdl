@@ -27,6 +27,6 @@ task dollars_in_strings {
   }
 
   runtime {
-    docker: "ubuntu:latest"
+    docker: "marketplace.gcr.io/google/ubuntu1804:latest"
   }
 }

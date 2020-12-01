@@ -4,7 +4,7 @@ id: three_step
 # Workflow-level DockerRequirement
 hints:
   DockerRequirement:
-    dockerPull: "ubuntu:latest"
+    dockerPull: "marketplace.gcr.io/google/ubuntu1804:latest"
 inputs:
 - id: pattern
   type: string

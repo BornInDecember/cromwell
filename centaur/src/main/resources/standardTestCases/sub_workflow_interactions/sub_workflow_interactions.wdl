@@ -8,7 +8,7 @@ task hello {
     wc -w < hello > count
   }
   runtime {
-      docker: "ubuntu:latest"
+      docker: "marketplace.gcr.io/google/ubuntu1804:latest"
   }
   output {
     String salutation = read_string("hello")

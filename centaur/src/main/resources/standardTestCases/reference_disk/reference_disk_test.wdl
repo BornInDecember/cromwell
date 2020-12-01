@@ -8,7 +8,7 @@ task check_if_localized_as_symlink {
     Boolean is_symlink = read_boolean(stdout())
   }
   runtime {
-    docker: "ubuntu:latest"
+    docker: "marketplace.gcr.io/google/ubuntu1804:latest"
     backend: "Papiv2-Reference-Disk-Localization"
   }
 }

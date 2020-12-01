@@ -16,6 +16,6 @@ task read_previous_string {
     String hi_out = read_string(hi_out_file)
   }
   runtime {
-    docker: "ubuntu:latest"
+    docker: "marketplace.gcr.io/google/ubuntu1804:latest"
   }
 }

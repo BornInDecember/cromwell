@@ -8,7 +8,7 @@ $graph:
     - class: InitialWorkDirRequirement
       listing: $(inputs.indir.listing)
     - class: DockerRequirement
-      dockerPull: "ubuntu:latest"
+      dockerPull: "marketplace.gcr.io/google/ubuntu1804:latest"
   inputs:
     indir: Directory
   outputs:

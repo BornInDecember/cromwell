@@ -20,7 +20,7 @@ task maybe_create_file {
         File? maybe = "maybe"
     }
     runtime {
-       docker: "ubuntu:latest"
+       docker: "marketplace.gcr.io/google/ubuntu1804:latest"
     }
 }
 
@@ -44,7 +44,7 @@ task more_complicated_maybe_file_tests {
         }
     }
     runtime {
-        docker: "ubuntu:latest"
+        docker: "marketplace.gcr.io/google/ubuntu1804:latest"
     }
 }
 

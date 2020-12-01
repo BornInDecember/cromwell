@@ -4,7 +4,7 @@ task nobody {
   }
 
   runtime {
-    docker: "ubuntu:latest"
+    docker: "marketplace.gcr.io/google/ubuntu1804:latest"
     docker_user: "nobody"
   }
 

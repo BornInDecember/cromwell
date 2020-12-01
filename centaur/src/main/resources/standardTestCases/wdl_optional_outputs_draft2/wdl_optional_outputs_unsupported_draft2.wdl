@@ -10,7 +10,7 @@ task unsupported_pairs {
         Pair[File?, File] one_optional = ("no", "yes")
     }
     runtime {
-        docker: "ubuntu:latest"
+        docker: "marketplace.gcr.io/google/ubuntu1804:latest"
     }
 }
 

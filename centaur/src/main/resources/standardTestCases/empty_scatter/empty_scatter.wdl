@@ -23,6 +23,6 @@ task do_nothing {
     String str = "str"
   }
   runtime {
-    docker: "ubuntu:latest"
+    docker: "marketplace.gcr.io/google/ubuntu1804:latest"
   }
 }

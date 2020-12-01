@@ -9,7 +9,7 @@ task upstream {
     Boolean faux = read_boolean("false")
   }
   runtime {
-    docker: "ubuntu:latest"
+    docker: "marketplace.gcr.io/google/ubuntu1804:latest"
   }
 }
 
@@ -21,7 +21,7 @@ task optional {
     String message = read_string("pipe")
   }
   runtime {
-    docker: "ubuntu:latest"
+    docker: "marketplace.gcr.io/google/ubuntu1804:latest"
   }
 }
 
@@ -37,7 +37,7 @@ task downstream {
     String faux = read_string("faux")
   }
   runtime {
-    docker: "ubuntu:latest"
+    docker: "marketplace.gcr.io/google/ubuntu1804:latest"
   }
 }
 

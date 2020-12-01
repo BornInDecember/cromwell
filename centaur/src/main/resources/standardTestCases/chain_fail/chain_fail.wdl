@@ -30,7 +30,7 @@ task fail {
     exit 1
   }
   runtime {
-    docker: "ubuntu:latest"
+    docker: "marketplace.gcr.io/google/ubuntu1804:latest"
   }
   output {
     Boolean o = read_boolean(stdout())

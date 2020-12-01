@@ -1,7 +1,7 @@
 task invalid_runtime_attributes {
     command { # NOOP }
     runtime {
-        docker: "ubuntu:latest"
+        docker: "marketplace.gcr.io/google/ubuntu1804:latest"
         continueOnReturnCode: "oops"
     }
 }

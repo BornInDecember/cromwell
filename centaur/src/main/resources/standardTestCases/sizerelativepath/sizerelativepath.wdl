@@ -14,7 +14,7 @@ task print_size {
         String out = read_string(stdout())
     }
 
-    runtime {docker: "ubuntu:latest"}
+    runtime {docker: "marketplace.gcr.io/google/ubuntu1804:latest"}
 }
 
 workflow sizerelativepath {

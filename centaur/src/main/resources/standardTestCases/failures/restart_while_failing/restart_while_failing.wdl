@@ -7,7 +7,7 @@ task sleep_exit {
         exit ${exit_code}
     }
     runtime {
-       docker: "ubuntu:latest"
+       docker: "marketplace.gcr.io/google/ubuntu1804:latest"
     }
     output {
         Boolean done = true

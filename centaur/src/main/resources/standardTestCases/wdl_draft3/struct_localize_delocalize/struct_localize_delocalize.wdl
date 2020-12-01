@@ -30,7 +30,7 @@ task struct_delocalize {
     }
   }
   runtime {
-    docker: "ubuntu:latest"
+    docker: "marketplace.gcr.io/google/ubuntu1804:latest"
   }
 }
 
@@ -46,6 +46,6 @@ task struct_localize {
     Array[String] found_files = read_lines("bam_files")
   }
   runtime {
-    docker: "ubuntu:latest"
+    docker: "marketplace.gcr.io/google/ubuntu1804:latest"
   }
 }

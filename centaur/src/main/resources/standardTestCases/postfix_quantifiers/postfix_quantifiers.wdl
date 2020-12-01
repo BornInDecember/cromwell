@@ -11,7 +11,7 @@ task hello {
     String greeting = read_string(stdout())
   }
   runtime {
-    docker: "ubuntu:latest"
+    docker: "marketplace.gcr.io/google/ubuntu1804:latest"
   }
 }
 
@@ -26,7 +26,7 @@ task bonjour {
     String greeting = read_string(stdout())
   }
   runtime {
-    docker: "ubuntu:latest"
+    docker: "marketplace.gcr.io/google/ubuntu1804:latest"
   }
 }
 

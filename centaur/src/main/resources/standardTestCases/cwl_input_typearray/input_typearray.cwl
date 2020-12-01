@@ -7,7 +7,7 @@ $graph:
   stdout: "response.txt"
   requirements:
   - class: DockerRequirement
-    dockerPull: "ubuntu:latest"
+    dockerPull: "marketplace.gcr.io/google/ubuntu1804:latest"
   - class: InlineJavascriptRequirement
   arguments:
       - position: 3

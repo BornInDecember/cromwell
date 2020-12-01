@@ -8,7 +8,7 @@ task first_task {
         File out = "out"
     }
     runtime {
-        docker: "ubuntu:latest"
+        docker: "marketplace.gcr.io/google/ubuntu1804:latest"
     }
 }
 
@@ -26,7 +26,7 @@ task cromwell_killer {
         File out = "out"
     }
     runtime {
-        docker: "ubuntu:latest"
+        docker: "marketplace.gcr.io/google/ubuntu1804:latest"
     }
 }
 
@@ -40,7 +40,7 @@ task third_task {
         Boolean done = true
     }
     runtime {
-        docker: "ubuntu:latest"
+        docker: "marketplace.gcr.io/google/ubuntu1804:latest"
     }
 }
 

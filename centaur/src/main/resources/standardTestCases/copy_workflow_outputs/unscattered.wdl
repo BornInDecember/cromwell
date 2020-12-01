@@ -9,7 +9,7 @@ task A {
     File out2 = "out2"
   }
   runtime {
-    docker: "ubuntu:latest"
+    docker: "marketplace.gcr.io/google/ubuntu1804:latest"
   }
 }
 
@@ -22,7 +22,7 @@ task B {
      Array[File] outs = ["out", "out2"]
   }
   runtime {
-    docker: "ubuntu:latest"
+    docker: "marketplace.gcr.io/google/ubuntu1804:latest"
   }
 }
 
@@ -58,7 +58,7 @@ task C {
       File out = "out"
   }
   runtime {
-    docker: "ubuntu:latest"
+    docker: "marketplace.gcr.io/google/ubuntu1804:latest"
   }
 }
 

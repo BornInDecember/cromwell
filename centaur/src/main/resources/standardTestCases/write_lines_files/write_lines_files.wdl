@@ -8,7 +8,7 @@ task make_file {
   output {
     File out = "out"
   }
-  runtime { docker:"ubuntu:latest" }
+  runtime { docker:"marketplace.gcr.io/google/ubuntu1804:latest" }
 }
 
 task switcho_reverso {
@@ -26,7 +26,7 @@ task switcho_reverso {
     Array[String] out = read_lines(stdout())
   }
   runtime {
-    docker:"ubuntu:latest"
+    docker:"marketplace.gcr.io/google/ubuntu1804:latest"
     failOnStderr: true
   }
 }

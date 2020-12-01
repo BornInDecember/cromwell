@@ -5,7 +5,7 @@ task let_me_run {
         echo "I'm alive !!"
     }
     runtime {
-       docker: "ubuntu:latest"
+       docker: "marketplace.gcr.io/google/ubuntu1804:latest"
     }
     output {
         Boolean done = true
@@ -18,7 +18,7 @@ task lost_in_space {
         echo "Forgotten task"
     }
     runtime {
-       docker: "ubuntu:latest"
+       docker: "marketplace.gcr.io/google/ubuntu1804:latest"
     }
 }
 

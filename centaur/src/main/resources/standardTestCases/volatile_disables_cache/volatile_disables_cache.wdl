@@ -16,7 +16,7 @@ task volatile_task {
         echo $RANDOM
     >>>
     runtime {
-        docker: "ubuntu:latest"
+        docker: "marketplace.gcr.io/google/ubuntu1804:latest"
     }
     output {
         Int out = read_int(stdout())

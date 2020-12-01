@@ -4,7 +4,7 @@ task t {
         echo "${i}"
     }
     runtime {
-        docker: "ubuntu:latest"
+        docker: "marketplace.gcr.io/google/ubuntu1804:latest"
     }
     output {
         String o = read_string(stdout())

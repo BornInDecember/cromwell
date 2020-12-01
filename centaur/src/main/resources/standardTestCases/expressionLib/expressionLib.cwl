@@ -2,7 +2,7 @@ class: CommandLineTool
 cwlVersion: v1.0
 hints:
   DockerRequirement:
-    dockerPull: "ubuntu:latest"
+    dockerPull: "marketplace.gcr.io/google/ubuntu1804:latest"
 requirements:
   InlineJavascriptRequirement:
     expressionLib:

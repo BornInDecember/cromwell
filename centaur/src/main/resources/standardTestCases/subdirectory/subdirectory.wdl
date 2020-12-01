@@ -5,7 +5,7 @@ task subdirTask {
     echo "I'm in a subdirectory !" > subFile
   }
   runtime {
-    docker: "ubuntu:latest"
+    docker: "marketplace.gcr.io/google/ubuntu1804:latest"
   }
   output {
     File outputFile = "subdir/subFile"

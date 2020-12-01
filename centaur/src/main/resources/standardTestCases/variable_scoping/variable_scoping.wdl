@@ -7,7 +7,7 @@ task scoping_task {
     }
 
     output { String out = read_string(stdout()) }
-    runtime { docker: "ubuntu:latest" }
+    runtime { docker: "marketplace.gcr.io/google/ubuntu1804:latest" }
 }
 
 workflow scoping_wf {

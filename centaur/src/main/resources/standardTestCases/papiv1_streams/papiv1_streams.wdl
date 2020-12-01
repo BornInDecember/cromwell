@@ -8,7 +8,7 @@ task sup {
     echo sup ~{i}
   }
   runtime {
-    docker: "ubuntu:latest"
+    docker: "marketplace.gcr.io/google/ubuntu1804:latest"
   }
 }
 

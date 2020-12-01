@@ -4,7 +4,7 @@ id: cwl_restart
 # Workflow-level DockerRequirement
 requirements:
   DockerRequirement:
-    dockerPull: "ubuntu:latest"
+    dockerPull: "marketplace.gcr.io/google/ubuntu1804:latest"
 inputs: []
 outputs:
 - id: flag

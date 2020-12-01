@@ -12,7 +12,7 @@ task producer {
   }
 
   runtime {
-    docker: "ubuntu:latest"
+    docker: "marketplace.gcr.io/google/ubuntu1804:latest"
   }
 
   output {
@@ -31,7 +31,7 @@ task consumer {
   }
 
   runtime {
-    docker: "ubuntu:latest"
+    docker: "marketplace.gcr.io/google/ubuntu1804:latest"
   }
 
   output {

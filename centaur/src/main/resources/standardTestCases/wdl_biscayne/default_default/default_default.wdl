@@ -17,7 +17,7 @@ task default_default_task {
     echo "x: '~{x}' y: '~{y}'"
   >>>
   runtime {
-    docker: "ubuntu:latest"
+    docker: "marketplace.gcr.io/google/ubuntu1804:latest"
   }
   output {
     String out = read_string(stdout())

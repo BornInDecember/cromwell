@@ -3,7 +3,7 @@ task exitTask {
     exit 5
   }
   runtime {
-    docker: "ubuntu:latest"
+    docker: "marketplace.gcr.io/google/ubuntu1804:latest"
     continueOnReturnCode: 5
   }
 }

@@ -28,7 +28,7 @@ task mkFile {
   output {
     File numbers = stdout()
   }
-  runtime {docker: "ubuntu:latest"}
+  runtime {docker: "marketplace.gcr.io/google/ubuntu1804:latest"}
 }
 
 task grep {
@@ -42,7 +42,7 @@ task grep {
   output {
     Int count = read_int(stdout())
   }
-  runtime {docker: "ubuntu:latest"}
+  runtime {docker: "marketplace.gcr.io/google/ubuntu1804:latest"}
 }
 
 task wc {
@@ -55,7 +55,7 @@ task wc {
   output {
     Int count = read_int(stdout())
   }
-  runtime {docker: "ubuntu:latest"}
+  runtime {docker: "marketplace.gcr.io/google/ubuntu1804:latest"}
 }
 
 task join {
@@ -69,5 +69,5 @@ task join {
   output {
     Int proportion = read_int(stdout())
   }
-  runtime {docker: "ubuntu:latest"}
+  runtime {docker: "marketplace.gcr.io/google/ubuntu1804:latest"}
 }

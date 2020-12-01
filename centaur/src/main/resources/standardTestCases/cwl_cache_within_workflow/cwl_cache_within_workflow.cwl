@@ -77,7 +77,7 @@ $graph:
 
   requirements:
   - class: DockerRequirement
-    dockerPull: "ubuntu:latest"
+    dockerPull: "marketplace.gcr.io/google/ubuntu1804:latest"
   - class: ShellCommandRequirement
 
   inputs:

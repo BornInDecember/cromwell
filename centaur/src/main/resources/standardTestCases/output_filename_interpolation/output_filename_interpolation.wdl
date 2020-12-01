@@ -16,7 +16,7 @@ task output_filename_interpolation {
         String c = read_string(outputPrefix + "/" + outputMain + "." + outputSuffix)
     }
 
-    runtime { docker: "ubuntu:latest" }
+    runtime { docker: "marketplace.gcr.io/google/ubuntu1804:latest" }
 }
 
 workflow output_filename_interpolation_wf {

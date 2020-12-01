@@ -11,7 +11,7 @@ task echo_int {
     Int out = read_int(stdout())
   }
   runtime {
-    docker: "ubuntu:latest"
+    docker: "marketplace.gcr.io/google/ubuntu1804:latest"
   }
 }
 

@@ -16,7 +16,7 @@ task output_redirection {
         String stderr = read_string(stderr())
     }
     runtime {
-        docker: "ubuntu:latest"
+        docker: "marketplace.gcr.io/google/ubuntu1804:latest"
     }
 }
 

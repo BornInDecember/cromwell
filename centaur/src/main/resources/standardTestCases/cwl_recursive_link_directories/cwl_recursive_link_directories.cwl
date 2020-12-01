@@ -7,7 +7,7 @@ $graph:
   cwlVersion: v1.0
   hints:
     - class: DockerRequirement
-      dockerPull: ubuntu:latest
+      dockerPull: marketplace.gcr.io/google/ubuntu1804:latest
   inputs: []
   outputs:
     output_dir:

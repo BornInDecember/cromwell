@@ -5,7 +5,7 @@ task make_a_file {
   output {
     File a_file = "canned"
   }
-  runtime {docker: "ubuntu:latest"}
+  runtime {docker: "marketplace.gcr.io/google/ubuntu1804:latest"}
 }
 
 task cat {
@@ -16,7 +16,7 @@ task cat {
     cat ${flags} ${file}
   }
 
-  runtime { docker: "ubuntu:latest" }
+  runtime { docker: "marketplace.gcr.io/google/ubuntu1804:latest" }
 
   output {
     File procs = stdout()
@@ -32,7 +32,7 @@ task cgrep {
     grep '${pattern}' ${in_file} | wc -l
   }
 
-  runtime { docker: "ubuntu:latest" }
+  runtime { docker: "marketplace.gcr.io/google/ubuntu1804:latest" }
 
   output {
     Int count = read_int(stdout())

@@ -10,7 +10,7 @@ task f2a {
   output {
     Array[String] out = read_lines(stdout())
   }
-  runtime {docker:"ubuntu:latest"}
+  runtime {docker:"marketplace.gcr.io/google/ubuntu1804:latest"}
 }
 
 task a2f {
@@ -24,7 +24,7 @@ task a2f {
     File out = stdout()
     String x = read_string(out)
   }
-  runtime {docker:"ubuntu:latest"}
+  runtime {docker:"marketplace.gcr.io/google/ubuntu1804:latest"}
 }
 
 workflow write_lines {

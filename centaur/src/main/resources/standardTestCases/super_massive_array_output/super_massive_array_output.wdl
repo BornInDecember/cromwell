@@ -11,7 +11,7 @@ task StringSpam {
     done
   >>>
   runtime {
-    docker: "ubuntu:latest"
+    docker: "marketplace.gcr.io/google/ubuntu1804:latest"
   }
   output {
     Array[String] outArray = read_lines("file.txt")

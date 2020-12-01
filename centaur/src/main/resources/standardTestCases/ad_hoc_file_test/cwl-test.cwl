@@ -3,7 +3,7 @@ cwlVersion: v1.0
 baseCommand: ["sh", "example.sh"]
 hints:
   DockerRequirement:
-    dockerPull: ubuntu:latest
+    dockerPull: marketplace.gcr.io/google/ubuntu1804:latest
 inputs: []
 
 requirements:

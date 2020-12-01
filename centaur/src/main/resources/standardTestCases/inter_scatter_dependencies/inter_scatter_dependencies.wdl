@@ -7,7 +7,7 @@ task mirror {
     String out = read_string(stdout())
   }
   runtime {
-    docker: "ubuntu:latest"
+    docker: "marketplace.gcr.io/google/ubuntu1804:latest"
   }
 }
 
@@ -23,7 +23,7 @@ task mirror_array {
     Array[String] out = read_lines(stdout())
   }
   runtime {
-    docker: "ubuntu:latest"
+    docker: "marketplace.gcr.io/google/ubuntu1804:latest"
   }
 }
 

@@ -7,7 +7,7 @@ task createFileArray {
   output {
     Array[File] out = [ "out/hello.txt", "out/ciao.txt" ]
   }
-  runtime {docker:"ubuntu:latest"}
+  runtime {docker:"marketplace.gcr.io/google/ubuntu1804:latest"}
 }
 
 task combiner {
@@ -18,7 +18,7 @@ task combiner {
   output {
     String result = read_string(stdout())
   }
-  runtime {docker:"ubuntu:latest"}
+  runtime {docker:"marketplace.gcr.io/google/ubuntu1804:latest"}
 }
 
 workflow filearrayoutput {

@@ -13,7 +13,7 @@ task text_to_file {
         File text_file = filepath
     }
     runtime {
-        docker: "ubuntu:latest"
+        docker: "marketplace.gcr.io/google/ubuntu1804:latest"
     }
 }
 

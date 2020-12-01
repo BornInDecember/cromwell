@@ -8,7 +8,7 @@ task readString {
      String out = read_string("file_256k")
   }
   runtime {
-    docker: "ubuntu:latest"
+    docker: "marketplace.gcr.io/google/ubuntu1804:latest"
   }
 }
 
@@ -21,7 +21,7 @@ task readBoolean {
      Boolean out = read_boolean("file_256k")
   }
   runtime {
-    docker: "ubuntu:latest"
+    docker: "marketplace.gcr.io/google/ubuntu1804:latest"
   }
 }
 
@@ -33,7 +33,7 @@ task readLines {
      Array[String] out = read_lines("file_256k")
   }
   runtime {
-    docker: "ubuntu:latest"
+    docker: "marketplace.gcr.io/google/ubuntu1804:latest"
   }
 }
 
@@ -45,7 +45,7 @@ task readTsv {
      Array[Array[String]] out = read_tsv("file_256k")
   }
   runtime {
-    docker: "ubuntu:latest"
+    docker: "marketplace.gcr.io/google/ubuntu1804:latest"
   }
 }
 
@@ -57,7 +57,7 @@ task readJson {
      Object out = read_json("file_256k")
   }
   runtime {
-    docker: "ubuntu:latest"
+    docker: "marketplace.gcr.io/google/ubuntu1804:latest"
   }
 }
 
@@ -69,7 +69,7 @@ task readObject {
      Object out = read_object("file_256k")
   }
   runtime {
-    docker: "ubuntu:latest"
+    docker: "marketplace.gcr.io/google/ubuntu1804:latest"
   }
 }
 
@@ -81,7 +81,7 @@ task readObjects {
      Array[Object] out = read_objects("file_256k")
   }
   runtime {
-    docker: "ubuntu:latest"
+    docker: "marketplace.gcr.io/google/ubuntu1804:latest"
   }
 }
 
@@ -93,7 +93,7 @@ task readMap {
      Map[String, String] out = read_map("file_256k")
   }
   runtime {
-    docker: "ubuntu:latest"
+    docker: "marketplace.gcr.io/google/ubuntu1804:latest"
   }
 } 
 
@@ -105,7 +105,7 @@ task readInt {
      Int out = read_int("file_256k")
   }
   runtime {
-    docker: "ubuntu:latest"
+    docker: "marketplace.gcr.io/google/ubuntu1804:latest"
   }
 } 
 
@@ -117,7 +117,7 @@ task readFloat {
      Float out = read_float("file_256k")
   }
   runtime {
-    docker: "ubuntu:latest"
+    docker: "marketplace.gcr.io/google/ubuntu1804:latest"
   }
 } 
 

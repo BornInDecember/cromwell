@@ -30,7 +30,7 @@ task increment {
     echo $(( ${i} + 1 ))
   }
   runtime {
-    docker: "ubuntu:latest"
+    docker: "marketplace.gcr.io/google/ubuntu1804:latest"
   }
   output {
     Int o = read_int(stdout())
@@ -45,7 +45,7 @@ task sum {
     echo $(( ${i} + ${j} ))
   }
   runtime {
-    docker: "ubuntu:latest"
+    docker: "marketplace.gcr.io/google/ubuntu1804:latest"
   }
   output {
     Int o = read_int(stdout())

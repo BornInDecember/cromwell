@@ -13,7 +13,7 @@ task strings {
     String? out_coerced_string = coerced_string
   }
   runtime {
-    docker: "ubuntu:latest"
+    docker: "marketplace.gcr.io/google/ubuntu1804:latest"
   }
 }
 

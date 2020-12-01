@@ -7,7 +7,7 @@ task A {
     Array[File] outs = [ "B1", "B2" ]
   }
   runtime {
-    docker: "ubuntu:latest"
+    docker: "marketplace.gcr.io/google/ubuntu1804:latest"
   }
 }
 

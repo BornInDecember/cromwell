@@ -33,7 +33,7 @@ task f2a {
   }
 
   runtime {
-    docker:"ubuntu:latest"
+    docker:"marketplace.gcr.io/google/ubuntu1804:latest"
   }
 }
 
@@ -52,6 +52,6 @@ task a2f {
   }
 
   runtime {
-    docker:"ubuntu:latest"
+    docker:"marketplace.gcr.io/google/ubuntu1804:latest"
   }
 }

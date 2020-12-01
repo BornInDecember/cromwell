@@ -12,7 +12,7 @@ outputs:
 requirements:
   - class: ScatterFeatureRequirement
   - class: DockerRequirement
-    dockerPull: ubuntu:latest
+    dockerPull: marketplace.gcr.io/google/ubuntu1804:latest
 
 steps:
   step1:

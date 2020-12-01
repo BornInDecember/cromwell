@@ -7,7 +7,7 @@ task aborted {
         sleep 1200
     }
     runtime {
-       docker: "ubuntu:latest"
+       docker: "marketplace.gcr.io/google/ubuntu1804:latest"
     }
     output {
       Boolean done = true

@@ -7,7 +7,7 @@ task A {
   }
   runtime {
     continueOnReturnCode: false
-    docker: "ubuntu:latest"
+    docker: "marketplace.gcr.io/google/ubuntu1804:latest"
   }
 }
 
@@ -17,7 +17,7 @@ task B {
     echo ${B_in}
   }
   runtime {
-    docker: "ubuntu:latest"
+    docker: "marketplace.gcr.io/google/ubuntu1804:latest"
   }
 }
 

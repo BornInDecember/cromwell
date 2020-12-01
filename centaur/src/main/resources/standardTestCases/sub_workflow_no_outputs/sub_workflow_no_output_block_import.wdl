@@ -17,7 +17,7 @@ task hello {
   command {}
 
   runtime {
-    docker: "ubuntu:latest"
+    docker: "marketplace.gcr.io/google/ubuntu1804:latest"
   }
   output {
     Array[String] out = inputs

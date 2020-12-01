@@ -31,7 +31,7 @@ task source {
         String result = read_string(stdout())
     }
     runtime {
-        docker: "ubuntu:latest"
+        docker: "marketplace.gcr.io/google/ubuntu1804:latest"
     }
 }
 
@@ -46,7 +46,7 @@ task consumeStrings {
         String x = read_string(stdout())
     }
     runtime {
-        docker: "ubuntu:latest"
+        docker: "marketplace.gcr.io/google/ubuntu1804:latest"
     }
 }
 
@@ -61,6 +61,6 @@ task consumeFiles {
         String x = read_string(stdout())
     }
     runtime {
-        docker: "ubuntu:latest"
+        docker: "marketplace.gcr.io/google/ubuntu1804:latest"
     }
 }

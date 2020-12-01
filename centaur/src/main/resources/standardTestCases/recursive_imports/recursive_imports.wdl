@@ -11,7 +11,7 @@ task join {
   output {
     Int proportion = read_int(stdout())
   }
-  runtime {docker: "ubuntu:latest"}
+  runtime {docker: "marketplace.gcr.io/google/ubuntu1804:latest"}
 }
 
 workflow recursive_imports {

@@ -4,7 +4,7 @@ task foo {
     echo "foo"
   }
   runtime {
-    docker: "ubuntu:latest"
+    docker: "marketplace.gcr.io/google/ubuntu1804:latest"
   }
 }
 
