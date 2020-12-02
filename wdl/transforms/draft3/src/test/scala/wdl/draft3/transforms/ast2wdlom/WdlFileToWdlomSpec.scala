@@ -852,7 +852,7 @@ object WdlFileToWdlomSpec {
             ))
           )),
           runtimeSection = Some(RuntimeAttributesSectionElement(Vector(
-            KvPair("docker", StringLiteral("ubuntu:latest"))
+            KvPair("docker", StringLiteral("us.gcr.io/broad-dsde-cromwell-dev/centaur/ubuntu:12022020-for-cromwell-tests"))
           ))),
           metaSection = None,
           parameterMetaSection = None,
