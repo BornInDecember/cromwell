@@ -8,7 +8,7 @@ task url_grab {
         File progressBar = stderr()
     }
     runtime {
-        docker: "tutum/curl:latest"
+        docker: "us.gcr.io/broad-dsde-cromwell-dev/centaur/curl:latest"
         failOnStderr: false
     }
 }
@@ -20,7 +20,7 @@ task news_reader {
       wc -l < ${news}
     }
     output { Int news_size = read_int(stdout()) }
-    runtime { docker: "marketplace.gcr.io/google/ubuntu1804:latest" }
+    runtime { docker: "us.gcr.io/broad-dsde-cromwell-dev/centaur/ubuntu:12022020-for-cromwell-tests" }
 }
 
 workflow curl_wf {

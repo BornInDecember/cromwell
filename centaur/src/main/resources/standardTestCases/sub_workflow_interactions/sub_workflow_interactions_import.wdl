@@ -4,7 +4,7 @@ task countTo {
         seq 0 1 ${value}
     }
     runtime {
-          docker: "marketplace.gcr.io/google/ubuntu1804:latest"
+          docker: "us.gcr.io/broad-dsde-cromwell-dev/centaur/ubuntu:12022020-for-cromwell-tests"
       }
     output {
         File range = stdout()
@@ -17,7 +17,7 @@ task filterEvens {
         grep '[02468]$' ${numbers} > evens
     }
     runtime {
-          docker: "marketplace.gcr.io/google/ubuntu1804:latest"
+          docker: "us.gcr.io/broad-dsde-cromwell-dev/centaur/ubuntu:12022020-for-cromwell-tests"
       }
     output {
         File evens = "evens"

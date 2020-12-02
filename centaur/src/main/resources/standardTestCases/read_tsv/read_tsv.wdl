@@ -8,7 +8,7 @@ task output_table {
      Array[Array[String]] table = read_tsv(stdout())
   }
   runtime {
-    docker: "marketplace.gcr.io/google/ubuntu1804:latest"
+    docker: "us.gcr.io/broad-dsde-cromwell-dev/centaur/ubuntu:12022020-for-cromwell-tests"
   }
 }
 
@@ -25,7 +25,7 @@ task output_file_table {
      Array[Array[File]] table = read_tsv(stdout())
   }
   runtime {
-    docker: "marketplace.gcr.io/google/ubuntu1804:latest"
+    docker: "us.gcr.io/broad-dsde-cromwell-dev/centaur/ubuntu:12022020-for-cromwell-tests"
   }
 }
 
@@ -39,7 +39,7 @@ task output_matrix {
      Array[Array[Int]] matrix = read_tsv(stdout())
   }
   runtime {
-   docker: "marketplace.gcr.io/google/ubuntu1804:latest"
+   docker: "us.gcr.io/broad-dsde-cromwell-dev/centaur/ubuntu:12022020-for-cromwell-tests"
   }
 }
 

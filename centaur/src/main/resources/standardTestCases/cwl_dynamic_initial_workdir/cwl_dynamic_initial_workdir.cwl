@@ -8,7 +8,7 @@ $graph:
     - class: InitialWorkDirRequirement
       listing: $(inputs.indir.listing)
     - class: DockerRequirement
-      dockerPull: "marketplace.gcr.io/google/ubuntu1804:latest"
+      dockerPull: "us.gcr.io/broad-dsde-cromwell-dev/centaur/ubuntu:12022020-for-cromwell-tests"
   inputs:
     indir: Directory
   outputs:

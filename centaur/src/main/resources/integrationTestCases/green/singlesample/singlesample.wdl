@@ -71,7 +71,7 @@ task CheckFinalVcfExtension {
     CODE
   >>>
   runtime {
-    docker: "python:2.7"
+    docker: "us.gcr.io/broad-dsde-cromwell-dev/centaur/python:2.7"
     memory: "2 GB"
   }
   output {
@@ -466,7 +466,7 @@ task CreateSequenceGroupingTSV {
   >>>
   runtime {
     preemptible: preemptible_tries
-    docker: "python:2.7"
+    docker: "us.gcr.io/broad-dsde-cromwell-dev/centaur/python:2.7"
     memory: "2 GB"
   }
   output {
@@ -696,7 +696,7 @@ task CollectRawWgsMetrics {
       OUTPUT=${metrics_filename}
   }
   runtime {
-    docker: "broadinstitute/genomes-in-the-cloud:2.2.5-1486412288"
+    docker: "us.gcr.io/broad-dsde-cromwell-dev/centaur/genomes-in-the-cloud:2.2.5-1486412288"
     memory: "3 GB"
     disks: "local-disk " + disk_size + " HDD"
   }
@@ -1044,7 +1044,7 @@ command <<<
   mv ${output_basename}.bam.bai ${output_basename}.bai
   >>>
   runtime {
-    docker: "broadinstitute/genomes-in-the-cloud:2.2.5-1486412288"
+    docker: "us.gcr.io/broad-dsde-cromwell-dev/centaur/genomes-in-the-cloud:2.2.5-1486412288"
     memory: "3 GB"
     disks: "local-disk " + disk_size + " HDD"
   }

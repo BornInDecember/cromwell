@@ -4,7 +4,7 @@ id: cwl_restart
 # Workflow-level DockerRequirement
 requirements:
   DockerRequirement:
-    dockerPull: "marketplace.gcr.io/google/ubuntu1804:latest"
+    dockerPull: "us.gcr.io/broad-dsde-cromwell-dev/centaur/ubuntu:12022020-for-cromwell-tests"
 inputs: []
 outputs:
 - id: flag

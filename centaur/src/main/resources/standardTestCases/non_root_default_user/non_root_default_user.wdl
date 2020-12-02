@@ -5,7 +5,7 @@ task notroot {
   }
 
   runtime {
-    docker: "broadinstitute/cromwell-docker-test:notroot"
+    docker: "us.gcr.io/broad-dsde-cromwell-dev/centaur/cromwell-docker-test:notroot"
   }
 
   output {

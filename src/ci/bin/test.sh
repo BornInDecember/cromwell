@@ -6,4 +6,3 @@ set -o errexit -o nounset -o pipefail
 source "${BASH_SOURCE%/*}/test.inc.sh" || source test.inc.sh
 
 cromwell::build::exec_test_script
-

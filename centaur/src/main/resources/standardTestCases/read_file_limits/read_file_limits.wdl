@@ -6,7 +6,7 @@ task readString {
      String out = read_string("file_256k")
   }
   runtime {
-    docker: "marketplace.gcr.io/google/ubuntu1804:latest"
+    docker: "us.gcr.io/broad-dsde-cromwell-dev/centaur/ubuntu:12022020-for-cromwell-tests"
   }
 }
 
@@ -19,7 +19,7 @@ task readBoolean {
      Boolean out = read_boolean("file_256k")
   }
   runtime {
-    docker: "marketplace.gcr.io/google/ubuntu1804:latest"
+    docker: "us.gcr.io/broad-dsde-cromwell-dev/centaur/ubuntu:12022020-for-cromwell-tests"
   }
 }
 
@@ -31,7 +31,7 @@ task readLines {
      Array[String] out = read_lines("file_256k")
   }
   runtime {
-    docker: "marketplace.gcr.io/google/ubuntu1804:latest"
+    docker: "us.gcr.io/broad-dsde-cromwell-dev/centaur/ubuntu:12022020-for-cromwell-tests"
   }
 }
 
@@ -43,7 +43,7 @@ task readTsv {
      Array[Array[String]] out = read_tsv("file_256k")
   }
   runtime {
-    docker: "marketplace.gcr.io/google/ubuntu1804:latest"
+    docker: "us.gcr.io/broad-dsde-cromwell-dev/centaur/ubuntu:12022020-for-cromwell-tests"
   }
 }
 
@@ -55,7 +55,7 @@ task readJson {
      Object out = read_json("file_256k")
   }
   runtime {
-    docker: "marketplace.gcr.io/google/ubuntu1804:latest"
+    docker: "us.gcr.io/broad-dsde-cromwell-dev/centaur/ubuntu:12022020-for-cromwell-tests"
   }
 }
 
@@ -67,7 +67,7 @@ task readObject {
      Object out = read_object("file_256k")
   }
   runtime {
-    docker: "marketplace.gcr.io/google/ubuntu1804:latest"
+    docker: "us.gcr.io/broad-dsde-cromwell-dev/centaur/ubuntu:12022020-for-cromwell-tests"
   }
 }
 
@@ -79,7 +79,7 @@ task readObjects {
      Array[Object] out = read_objects("file_256k")
   }
   runtime {
-    docker: "marketplace.gcr.io/google/ubuntu1804:latest"
+    docker: "us.gcr.io/broad-dsde-cromwell-dev/centaur/ubuntu:12022020-for-cromwell-tests"
   }
 }
 
@@ -91,7 +91,7 @@ task readMap {
      Map[String, String] out = read_map("file_256k")
   }
   runtime {
-    docker: "marketplace.gcr.io/google/ubuntu1804:latest"
+    docker: "us.gcr.io/broad-dsde-cromwell-dev/centaur/ubuntu:12022020-for-cromwell-tests"
   }
 } 
 
@@ -103,7 +103,7 @@ task readInt {
      Int out = read_int("file_256k")
   }
   runtime {
-    docker: "marketplace.gcr.io/google/ubuntu1804:latest"
+    docker: "us.gcr.io/broad-dsde-cromwell-dev/centaur/ubuntu:12022020-for-cromwell-tests"
   }
 } 
 
@@ -115,7 +115,7 @@ task readFloat {
      Float out = read_float("file_256k")
   }
   runtime {
-    docker: "marketplace.gcr.io/google/ubuntu1804:latest"
+    docker: "us.gcr.io/broad-dsde-cromwell-dev/centaur/ubuntu:12022020-for-cromwell-tests"
   }
 } 
 

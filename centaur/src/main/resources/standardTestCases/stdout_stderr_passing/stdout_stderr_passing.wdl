@@ -7,7 +7,7 @@ task a {
     File out = stdout()
     File err = stderr()
   }
-  runtime {docker: "marketplace.gcr.io/google/ubuntu1804:latest"}
+  runtime {docker: "us.gcr.io/broad-dsde-cromwell-dev/centaur/ubuntu:12022020-for-cromwell-tests"}
 }
 
 task b {
@@ -18,7 +18,7 @@ task b {
   output {
     Int out = read_int(stdout())
   }
-  runtime {docker: "marketplace.gcr.io/google/ubuntu1804:latest"}
+  runtime {docker: "us.gcr.io/broad-dsde-cromwell-dev/centaur/ubuntu:12022020-for-cromwell-tests"}
 }
 
 workflow stdout_stderr_passing {

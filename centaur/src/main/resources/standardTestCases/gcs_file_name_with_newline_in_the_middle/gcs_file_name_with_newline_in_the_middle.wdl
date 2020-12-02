@@ -3,7 +3,7 @@ task create_file_without_newline {
     echo "Test file" > file_name_part1
   }
   runtime {
-    docker: "marketplace.gcr.io/google/ubuntu1804:latest"
+    docker: "us.gcr.io/broad-dsde-cromwell-dev/centaur/ubuntu:12022020-for-cromwell-tests"
   }
   output {
     File fileWithoutNewLine = "file_name_part1"
@@ -30,7 +30,7 @@ task read_file_with_newline {
     cat ${inputFile}
   }
   runtime {
-    docker: "marketplace.gcr.io/google/ubuntu1804:latest"
+    docker: "us.gcr.io/broad-dsde-cromwell-dev/centaur/ubuntu:12022020-for-cromwell-tests"
   }
   output {
     String out = read_string(stdout())

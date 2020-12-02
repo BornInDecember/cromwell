@@ -22,7 +22,7 @@ task none_in_command {
     echo ~{if (defined(None)) then "Some" else "None" }
   >>>
   runtime {
-    docker: "marketplace.gcr.io/google/ubuntu1804:latest"
+    docker: "us.gcr.io/broad-dsde-cromwell-dev/centaur/ubuntu:12022020-for-cromwell-tests"
   }
   output {
     String s = read_string(stdout())

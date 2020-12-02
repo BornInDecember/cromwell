@@ -7,7 +7,7 @@ task make_a_file {
   output {
     File a_file = "a_file"
   }
-  runtime {docker: "marketplace.gcr.io/google/ubuntu1804:latest"}
+  runtime {docker: "us.gcr.io/broad-dsde-cromwell-dev/centaur/ubuntu:12022020-for-cromwell-tests"}
 }
 
 task size {
@@ -46,7 +46,7 @@ task size {
     Float created_file_size_in_tib = size("created_file", "TiB")
   }
 
-  runtime {docker: "marketplace.gcr.io/google/ubuntu1804:latest"}
+  runtime {docker: "us.gcr.io/broad-dsde-cromwell-dev/centaur/ubuntu:12022020-for-cromwell-tests"}
 }
 
 workflow sizeenginefunction {

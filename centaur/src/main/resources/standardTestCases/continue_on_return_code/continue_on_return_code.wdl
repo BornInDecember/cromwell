@@ -9,7 +9,7 @@ task continueOnRC1 {
         File ohno = stdout()
     }
     runtime {
-        docker: "marketplace.gcr.io/google/ubuntu1804:latest"
+        docker: "us.gcr.io/broad-dsde-cromwell-dev/centaur/ubuntu:12022020-for-cromwell-tests"
         continueOnReturnCode: true
     }
 }
@@ -25,7 +25,7 @@ task continueOnRC2 {
         String ohno = read_string(stdout())
     }
     runtime {
-        docker: "marketplace.gcr.io/google/ubuntu1804:latest"
+        docker: "us.gcr.io/broad-dsde-cromwell-dev/centaur/ubuntu:12022020-for-cromwell-tests"
         continueOnReturnCode: 12
     }
 }
@@ -41,7 +41,7 @@ task continueOnRC3 {
         String ohno = read_string(stdout())
     }
     runtime {
-        docker: "marketplace.gcr.io/google/ubuntu1804:latest"
+        docker: "us.gcr.io/broad-dsde-cromwell-dev/centaur/ubuntu:12022020-for-cromwell-tests"
         continueOnReturnCode: [1, 12, 123, 23, 3]
     }
 }
@@ -57,7 +57,7 @@ task finisher {
         String finished = read_string(stdout())
     }
     runtime {
-        docker: "marketplace.gcr.io/google/ubuntu1804:latest"
+        docker: "us.gcr.io/broad-dsde-cromwell-dev/centaur/ubuntu:12022020-for-cromwell-tests"
         continueOnReturnCode: 0
     }
 }

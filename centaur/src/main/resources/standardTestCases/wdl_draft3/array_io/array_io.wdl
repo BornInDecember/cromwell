@@ -35,7 +35,7 @@ task concat_files {
     File concatenated = stdout()
   }
   runtime {
-    docker: "marketplace.gcr.io/google/ubuntu1804:latest"
+    docker: "us.gcr.io/broad-dsde-cromwell-dev/centaur/ubuntu:12022020-for-cromwell-tests"
   }
 }
 
@@ -51,7 +51,7 @@ task count_lines {
     Int count = read_int(stdout())
   }
   runtime {
-    docker: "marketplace.gcr.io/google/ubuntu1804:latest"
+    docker: "us.gcr.io/broad-dsde-cromwell-dev/centaur/ubuntu:12022020-for-cromwell-tests"
   }
 }
 
@@ -66,7 +66,7 @@ task serialize {
     String contents = read_string(stdout())
   }
   runtime {
-    docker: "marketplace.gcr.io/google/ubuntu1804:latest"
+    docker: "us.gcr.io/broad-dsde-cromwell-dev/centaur/ubuntu:12022020-for-cromwell-tests"
   }
 }
 
@@ -80,5 +80,5 @@ task mk_file {
   output {
     File out = "i"
   }
-  runtime { docker: "marketplace.gcr.io/google/ubuntu1804:latest" }
+  runtime { docker: "us.gcr.io/broad-dsde-cromwell-dev/centaur/ubuntu:12022020-for-cromwell-tests" }
 }

@@ -6,7 +6,7 @@ task hello_task {
   }
 
   runtime {
-    docker: "python:2.7"
+    docker: "us.gcr.io/broad-dsde-cromwell-dev/centaur/python:2.7"
   }
 
   output {

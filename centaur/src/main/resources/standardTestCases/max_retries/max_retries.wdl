@@ -9,7 +9,7 @@ task broken_task {
 
     command { cat ${s} }
     runtime {
-       docker: "ubuntu"
+       docker: "us.gcr.io/broad-dsde-cromwell-dev/centaur/ubuntu:12022020-for-cromwell-tests"
        maxRetries: 1
     }
 }

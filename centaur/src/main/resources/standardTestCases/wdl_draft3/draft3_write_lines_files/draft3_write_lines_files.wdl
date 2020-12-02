@@ -12,7 +12,7 @@ task make_file {
   output {
     File out = "out"
   }
-  runtime { docker:"marketplace.gcr.io/google/ubuntu1804:latest" }
+  runtime { docker:"us.gcr.io/broad-dsde-cromwell-dev/centaur/ubuntu:12022020-for-cromwell-tests" }
 }
 
 task switcho_reverso {
@@ -32,7 +32,7 @@ task switcho_reverso {
     Array[String] out = read_lines(stdout())
   }
   runtime {
-    docker:"marketplace.gcr.io/google/ubuntu1804:latest"
+    docker:"us.gcr.io/broad-dsde-cromwell-dev/centaur/ubuntu:12022020-for-cromwell-tests"
     failOnStderr: true
   }
 }

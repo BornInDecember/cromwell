@@ -6,7 +6,7 @@ task boundToFail {
    String badOutput = read_string(stdout())
   }
   runtime {
-    docker: "marketplace.gcr.io/google/ubuntu1804:latest"
+    docker: "us.gcr.io/broad-dsde-cromwell-dev/centaur/ubuntu:12022020-for-cromwell-tests"
   }
 }
 
@@ -16,7 +16,7 @@ task shouldNotStart {
      echo ${str}
     }
     runtime {
-       docker: "marketplace.gcr.io/google/ubuntu1804:latest"
+       docker: "us.gcr.io/broad-dsde-cromwell-dev/centaur/ubuntu:12022020-for-cromwell-tests"
     }
 }
 
@@ -46,7 +46,7 @@ task shouldSucceed {
      echo ${str}
     }
     runtime {
-       docker: "marketplace.gcr.io/google/ubuntu1804:latest"
+       docker: "us.gcr.io/broad-dsde-cromwell-dev/centaur/ubuntu:12022020-for-cromwell-tests"
     }
     output {
      String stalling = read_string(stdout())
@@ -59,7 +59,7 @@ task delayedTask {
      echo ${str_2}
     }
     runtime {
-       docker: "marketplace.gcr.io/google/ubuntu1804:latest"
+       docker: "us.gcr.io/broad-dsde-cromwell-dev/centaur/ubuntu:12022020-for-cromwell-tests"
     }
     output {
      String delayedOut = read_string(stdout())

@@ -17,7 +17,7 @@ task writeFiles {
     Array[File] specificDirectory = glob(dir + "/*.txt")
   }
   runtime {
-    docker:"marketplace.gcr.io/google/ubuntu1804:latest"
+    docker:"us.gcr.io/broad-dsde-cromwell-dev/centaur/ubuntu:12022020-for-cromwell-tests"
   }
 }
 
@@ -33,7 +33,7 @@ task unexpectedReturnCode {
   }
 
   runtime {
-    docker: "marketplace.gcr.io/google/ubuntu1804:latest"
+    docker: "us.gcr.io/broad-dsde-cromwell-dev/centaur/ubuntu:12022020-for-cromwell-tests"
     continueOnReturnCode: 3
   }
 }
@@ -61,7 +61,7 @@ task writeLinks {
     Array[File] hardLinkContents =  glob("${dir}/hard_link*.txt")
   }
   runtime {
-    docker:"marketplace.gcr.io/google/ubuntu1804:latest"
+    docker:"us.gcr.io/broad-dsde-cromwell-dev/centaur/ubuntu:12022020-for-cromwell-tests"
   }
 }
 

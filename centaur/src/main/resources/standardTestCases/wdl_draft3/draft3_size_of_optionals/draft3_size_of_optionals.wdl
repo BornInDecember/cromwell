@@ -62,7 +62,7 @@ task make_a_file {
     File a_file = "a_file"
     Int immediate_file_size = round(size(a_file))
   }
-  runtime { docker: "marketplace.gcr.io/google/ubuntu1804:latest" }
+  runtime { docker: "us.gcr.io/broad-dsde-cromwell-dev/centaur/ubuntu:12022020-for-cromwell-tests" }
 }
 
 task size_in_task_places {
@@ -93,7 +93,7 @@ task size_in_task_places {
 #  echo ~{round(size(input_file_2))}
 #  echo ~{round(size(input_files))}
 
-  runtime { docker: "marketplace.gcr.io/google/ubuntu1804:latest" }
+  runtime { docker: "us.gcr.io/broad-dsde-cromwell-dev/centaur/ubuntu:12022020-for-cromwell-tests" }
 
   output {
     Array[String] lines = read_lines(stdout())

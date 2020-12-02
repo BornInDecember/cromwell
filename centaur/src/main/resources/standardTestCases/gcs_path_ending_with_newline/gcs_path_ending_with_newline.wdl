@@ -3,7 +3,7 @@ task create_file {
     echo "Test file" > testfile.txt
   }
   runtime {
-    docker: "marketplace.gcr.io/google/ubuntu1804:latest"
+    docker: "us.gcr.io/broad-dsde-cromwell-dev/centaur/ubuntu:12022020-for-cromwell-tests"
   }
   output {
     File testFile = "testfile.txt"
@@ -17,7 +17,7 @@ task read_file_with_newline_added_to_the_end_of_the_path {
     cat ${fileWithModifiedPath}
   }
   runtime {
-    docker: "marketplace.gcr.io/google/ubuntu1804:latest"
+    docker: "us.gcr.io/broad-dsde-cromwell-dev/centaur/ubuntu:12022020-for-cromwell-tests"
   }
   output {
     String out = read_string(stdout())

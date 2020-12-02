@@ -20,13 +20,13 @@ task t {
   }
 
   runtime {
-    docker: "ubuntu:" + v
+    docker: "us.gcr.io/broad-dsde-cromwell-dev/centaur/ubuntu:" + v
     disks: "local-disk 20 SSD, /some/mnt 20 SSD"
   }
 }
 
 workflow custom_mount_point {
-  call t {input: v="latest"}
+  call t {input: v="12022020-for-cromwell-tests"}
 
   output {
      String o1 = t.out1

@@ -8,7 +8,7 @@ task first_task {
         File out = "out"
     }
     runtime {
-        docker: "marketplace.gcr.io/google/ubuntu1804:latest"
+        docker: "us.gcr.io/broad-dsde-cromwell-dev/centaur/ubuntu:12022020-for-cromwell-tests"
     }
 }
 
@@ -26,7 +26,7 @@ task cromwell_killer {
         File out = "out"
     }
     runtime {
-        docker: "marketplace.gcr.io/google/ubuntu1804:latest"
+        docker: "us.gcr.io/broad-dsde-cromwell-dev/centaur/ubuntu:12022020-for-cromwell-tests"
     }
 }
 
@@ -40,7 +40,7 @@ task third_task {
         Boolean done = true
     }
     runtime {
-        docker: "marketplace.gcr.io/google/ubuntu1804:latest"
+        docker: "us.gcr.io/broad-dsde-cromwell-dev/centaur/ubuntu:12022020-for-cromwell-tests"
     }
 }
 

@@ -5,7 +5,7 @@ task singleFile {
   output {
     File out = stdout()
   }
-  runtime { docker: "marketplace.gcr.io/google/ubuntu1804:latest" }
+  runtime { docker: "us.gcr.io/broad-dsde-cromwell-dev/centaur/ubuntu:12022020-for-cromwell-tests" }
 }
 
 task listFiles {
@@ -16,7 +16,7 @@ task listFiles {
   output {
     String result = read_string(stdout())
   }
-  runtime { docker: "marketplace.gcr.io/google/ubuntu1804:latest" }
+  runtime { docker: "us.gcr.io/broad-dsde-cromwell-dev/centaur/ubuntu:12022020-for-cromwell-tests" }
 }
 
 workflow oneToMany {

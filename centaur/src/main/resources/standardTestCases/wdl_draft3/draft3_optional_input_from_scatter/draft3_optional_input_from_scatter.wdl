@@ -28,7 +28,7 @@ task input_default_not_used {
         String greeting4 = "hello4"
     }
     command { echo ~{greeting1} ~{default="hello2" greeting2} ~{greeting3} ~{greeting4} }
-    runtime { docker: "marketplace.gcr.io/google/ubuntu1804:latest" }
+    runtime { docker: "us.gcr.io/broad-dsde-cromwell-dev/centaur/ubuntu:12022020-for-cromwell-tests" }
     output {
         String out = read_string(stdout())
     }

@@ -12,7 +12,7 @@ task a {
     echo ~{sep=", " true="--yes" false="--no" default="foo" world1}
   }
   runtime {
-    docker: "ubuntu:latest"
+    docker: "us.gcr.io/broad-dsde-cromwell-dev/centaur/ubuntu:12022020-for-cromwell-tests"
   }
   output {
     String out = read_string(stdout())
@@ -28,7 +28,7 @@ task b {
     echo goodbye ~{world}
   >>>
   runtime {
-    docker: "ubuntu:latest"
+    docker: "us.gcr.io/broad-dsde-cromwell-dev/centaur/ubuntu:12022020-for-cromwell-tests"
   }
   output {
     String out = read_string(stdout())

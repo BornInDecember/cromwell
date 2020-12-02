@@ -36,7 +36,7 @@ task localize_with_docker {
     output {
         String ls = read_string(stdout())
     }
-    runtime { docker: "marketplace.gcr.io/google/ubuntu1804:latest" }
+    runtime { docker: "us.gcr.io/broad-dsde-cromwell-dev/centaur/ubuntu:12022020-for-cromwell-tests" }
 }
 
 task echo_int_with_docker {
@@ -45,7 +45,7 @@ task echo_int_with_docker {
     echo ${int} > out
   }
   output {File out = "out"}
-  runtime { docker: "marketplace.gcr.io/google/ubuntu1804:latest" }
+  runtime { docker: "us.gcr.io/broad-dsde-cromwell-dev/centaur/ubuntu:12022020-for-cromwell-tests" }
 }
 
 workflow wf {

@@ -24,7 +24,7 @@ task make_directory {
     echo "foo text2" > foo/~{text2loc}
   }
   runtime {
-    docker: "marketplace.gcr.io/google/ubuntu1804:latest"
+    docker: "us.gcr.io/broad-dsde-cromwell-dev/centaur/ubuntu:12022020-for-cromwell-tests"
   }
   output {
     Directory d = "foo/"
@@ -41,7 +41,7 @@ task read_from_directory {
     cat ~{d}/~{text2loc}
   }
   runtime {
-    docker: "marketplace.gcr.io/google/ubuntu1804:latest"
+    docker: "us.gcr.io/broad-dsde-cromwell-dev/centaur/ubuntu:12022020-for-cromwell-tests"
   }
   output {
     Array[String] contents = read_lines(stdout())

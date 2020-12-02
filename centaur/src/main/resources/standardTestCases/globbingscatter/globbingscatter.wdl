@@ -10,7 +10,7 @@ task globber {
   output {
     Array[File] out = glob("out-*/*.txt")
   }
-  runtime {docker:"marketplace.gcr.io/google/ubuntu1804:latest"}
+  runtime {docker:"us.gcr.io/broad-dsde-cromwell-dev/centaur/ubuntu:12022020-for-cromwell-tests"}
 }
 
 task combiner {
@@ -21,7 +21,7 @@ task combiner {
   output {
     String result = read_string(stdout())
   }
-  runtime {docker:"marketplace.gcr.io/google/ubuntu1804:latest"}
+  runtime {docker:"us.gcr.io/broad-dsde-cromwell-dev/centaur/ubuntu:12022020-for-cromwell-tests"}
 }
 
 task catter {
@@ -32,7 +32,7 @@ task catter {
   output {
     File result = stdout()
   }
-  runtime {docker:"marketplace.gcr.io/google/ubuntu1804:latest"}
+  runtime {docker:"us.gcr.io/broad-dsde-cromwell-dev/centaur/ubuntu:12022020-for-cromwell-tests"}
 }
 
 workflow globbingscatter {

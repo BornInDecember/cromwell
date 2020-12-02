@@ -3,7 +3,7 @@ task let_me_run {
         echo "I'm alive !!"
     }
     runtime {
-       docker: "marketplace.gcr.io/google/ubuntu1804:latest"
+       docker: "us.gcr.io/broad-dsde-cromwell-dev/centaur/ubuntu:12022020-for-cromwell-tests"
     }
     output {
         Boolean done = true
@@ -19,7 +19,7 @@ task aborted {
         sleep 1200
     }
     runtime {
-       docker: "marketplace.gcr.io/google/ubuntu1804:latest"
+       docker: "us.gcr.io/broad-dsde-cromwell-dev/centaur/ubuntu:12022020-for-cromwell-tests"
     }
     output {
             Boolean done = true
@@ -32,7 +32,7 @@ task lost_in_space {
         echo "Forgotten task"
     }
     runtime {
-       docker: "marketplace.gcr.io/google/ubuntu1804:latest"
+       docker: "us.gcr.io/broad-dsde-cromwell-dev/centaur/ubuntu:12022020-for-cromwell-tests"
     }
 }
 

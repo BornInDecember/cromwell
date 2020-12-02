@@ -573,7 +573,7 @@ task CollectQualityYieldMetrics {
     disks: "local-disk " + sub(disk_size, "\\..*", "") + " HDD"
     memory: "3 GB"
     preemptible: preemptible_tries
-    docker: "broadinstitute/genomes-in-the-cloud:2.3.1-1512499786"
+    docker: "us.gcr.io/broad-dsde-cromwell-dev/centaur/genomes-in-the-cloud:2.3.1-1512499786"
   }
   output {
     File metrics = "${metrics_filename}"
@@ -591,7 +591,7 @@ task GetBwaVersion {
   }
   runtime {
     memory: "1 GB"
-    docker: "broadinstitute/genomes-in-the-cloud:2.3.1-1512499786"
+    docker: "us.gcr.io/broad-dsde-cromwell-dev/centaur/genomes-in-the-cloud:2.3.1-1512499786"
   }
   output {
     String version = read_string(stdout())
@@ -678,7 +678,7 @@ task SamToFastqAndBwaMemAndMba {
     memory: "14 GB"
     cpu: "16"
     disks: "local-disk " + sub(disk_size, "\\..*", "") + " HDD"
-    docker: "broadinstitute/genomes-in-the-cloud:2.3.1-1512499786"
+    docker: "us.gcr.io/broad-dsde-cromwell-dev/centaur/genomes-in-the-cloud:2.3.1-1512499786"
   }
   output {
     File output_bam = "${output_bam_basename}.bam"
@@ -709,7 +709,7 @@ task SortSam {
     cpu: "1"
     memory: "5000 MB"
     preemptible: preemptible_tries
-    docker: "broadinstitute/genomes-in-the-cloud:2.3.1-1512499786"
+    docker: "us.gcr.io/broad-dsde-cromwell-dev/centaur/genomes-in-the-cloud:2.3.1-1512499786"
   }
   output {
     File output_bam = "${output_bam_basename}.bam"
@@ -746,7 +746,7 @@ task CollectUnsortedReadgroupBamQualityMetrics {
     memory: "7 GB"
     disks: "local-disk " + sub(disk_size, "\\..*", "") + " HDD"
     preemptible: preemptible_tries
-    docker: "broadinstitute/genomes-in-the-cloud:2.3.1-1512499786"
+    docker: "us.gcr.io/broad-dsde-cromwell-dev/centaur/genomes-in-the-cloud:2.3.1-1512499786"
   }
   output {
     File base_distribution_by_cycle_pdf = "${output_bam_prefix}.base_distribution_by_cycle.pdf"
@@ -788,7 +788,7 @@ task CollectReadgroupBamQualityMetrics {
     memory: "7 GB"
     disks: "local-disk " + sub(disk_size, "\\..*", "") + " HDD"
     preemptible: preemptible_tries
-    docker: "broadinstitute/genomes-in-the-cloud:2.3.1-1512499786"
+    docker: "us.gcr.io/broad-dsde-cromwell-dev/centaur/genomes-in-the-cloud:2.3.1-1512499786"
   }
   output {
     File alignment_summary_metrics = "${output_bam_prefix}.alignment_summary_metrics"
@@ -833,7 +833,7 @@ task CollectAggregationMetrics {
     memory: "7 GB"
     disks: "local-disk " + sub(disk_size, "\\..*", "") + " HDD"
     preemptible: preemptible_tries
-    docker: "broadinstitute/genomes-in-the-cloud:2.3.1-1512499786"
+    docker: "us.gcr.io/broad-dsde-cromwell-dev/centaur/genomes-in-the-cloud:2.3.1-1512499786"
   }
   output {
     File alignment_summary_metrics = "${output_bam_prefix}.alignment_summary_metrics"
@@ -875,7 +875,7 @@ task CrossCheckFingerprints {
     preemptible: preemptible_tries
     memory: "2 GB"
     disks: "local-disk " + sub(disk_size, "\\..*", "") + " HDD"
-    docker: "broadinstitute/genomes-in-the-cloud:2.3.1-1512499786"
+    docker: "us.gcr.io/broad-dsde-cromwell-dev/centaur/genomes-in-the-cloud:2.3.1-1512499786"
   }
   output {
     File metrics = "${metrics_filename}"
@@ -910,7 +910,7 @@ task CheckFingerprint {
     preemptible: preemptible_tries
     memory: "1 GB"
     disks: "local-disk " + sub(disk_size, "\\..*", "") + " HDD"
-    docker: "broadinstitute/genomes-in-the-cloud:2.3.1-1512499786"
+    docker: "us.gcr.io/broad-dsde-cromwell-dev/centaur/genomes-in-the-cloud:2.3.1-1512499786"
   }
   output {
     File summary_metrics = "${output_basename}.fingerprinting_summary_metrics"
@@ -952,7 +952,7 @@ task MarkDuplicates {
     preemptible: preemptible_tries
     memory: "7 GB"
     disks: "local-disk " + sub(disk_size, "\\..*", "") + " HDD"
-    docker: "broadinstitute/genomes-in-the-cloud:2.3.1-1512499786"
+    docker: "us.gcr.io/broad-dsde-cromwell-dev/centaur/genomes-in-the-cloud:2.3.1-1512499786"
   }
   output {
     File output_bam = "${output_bam_basename}.bam"
@@ -1006,7 +1006,7 @@ task CreateSequenceGroupingTSV {
   >>>
   runtime {
     preemptible: preemptible_tries
-    docker: "python:2.7"
+    docker: "us.gcr.io/broad-dsde-cromwell-dev/centaur/python:2.7"
     memory: "2 GB"
   }
   output {
@@ -1135,7 +1135,7 @@ task GatherBamFiles {
     preemptible: preemptible_tries
     memory: "3 GB"
     disks: "local-disk " + sub(disk_size, "\\..*", "") + " HDD"
-    docker: "broadinstitute/genomes-in-the-cloud:2.3.1-1512499786"
+    docker: "us.gcr.io/broad-dsde-cromwell-dev/centaur/genomes-in-the-cloud:2.3.1-1512499786"
   }
   output {
     File output_bam = "${output_bam_basename}.bam"
@@ -1180,7 +1180,7 @@ task CheckPreValidation {
   >>>
   runtime {
     preemptible: preemptible_tries
-    docker: "python:2.7"
+    docker: "us.gcr.io/broad-dsde-cromwell-dev/centaur/python:2.7"
     memory: "2 GB"
   }
   output {
@@ -1219,7 +1219,7 @@ task ValidateSamFile {
     preemptible: preemptible_tries
     memory: "7 GB"
     disks: "local-disk " + sub(disk_size, "\\..*", "") + " HDD"
-    docker: "broadinstitute/genomes-in-the-cloud:2.3.1-1512499786"
+    docker: "us.gcr.io/broad-dsde-cromwell-dev/centaur/genomes-in-the-cloud:2.3.1-1512499786"
   }
   output {
     File report = "${report_filename}"
@@ -1254,7 +1254,7 @@ task CollectWgsMetrics {
     preemptible: preemptible_tries
     memory: "3 GB"
     disks: "local-disk " + sub(disk_size, "\\..*", "") + " HDD"
-    docker: "broadinstitute/genomes-in-the-cloud:2.3.1-1512499786"
+    docker: "us.gcr.io/broad-dsde-cromwell-dev/centaur/genomes-in-the-cloud:2.3.1-1512499786"
   }
   output {
     File metrics = "${metrics_filename}"
@@ -1289,7 +1289,7 @@ task CollectRawWgsMetrics {
     preemptible: preemptible_tries
     memory: "3 GB"
     disks: "local-disk " + sub(disk_size, "\\..*", "") + " HDD"
-    docker: "broadinstitute/genomes-in-the-cloud:2.3.1-1512499786"
+    docker: "us.gcr.io/broad-dsde-cromwell-dev/centaur/genomes-in-the-cloud:2.3.1-1512499786"
   }
   output {
     File metrics = "${metrics_filename}"
@@ -1314,7 +1314,7 @@ task CalculateReadGroupChecksum {
     preemptible: preemptible_tries
     memory: "2 GB"
     disks: "local-disk " + sub(disk_size, "\\..*", "") + " HDD"
-    docker: "broadinstitute/genomes-in-the-cloud:2.3.1-1512499786"
+    docker: "us.gcr.io/broad-dsde-cromwell-dev/centaur/genomes-in-the-cloud:2.3.1-1512499786"
   }
   output {
     File md5_file = "${read_group_md5_filename}"
@@ -1436,7 +1436,7 @@ task ScatterIntervalList {
   }
   runtime {
     memory: "2 GB"
-    docker: "broadinstitute/genomes-in-the-cloud:2.3.1-1512499786"
+    docker: "us.gcr.io/broad-dsde-cromwell-dev/centaur/genomes-in-the-cloud:2.3.1-1512499786"
   }
 }
 
@@ -1484,7 +1484,7 @@ task HaplotypeCaller {
     memory: "10 GB"
     cpu: "1"
     disks: "local-disk " + sub(disk_size, "\\..*", "") + " HDD"
-    docker: "broadinstitute/genomes-in-the-cloud:2.3.1-1512499786"
+    docker: "us.gcr.io/broad-dsde-cromwell-dev/centaur/genomes-in-the-cloud:2.3.1-1512499786"
   }
   output {
     File output_gvcf = "${gvcf_basename}.vcf.gz"
@@ -1512,7 +1512,7 @@ task MergeVCFs {
     preemptible: preemptible_tries
     memory: "3 GB"
     disks: "local-disk " + disk_size + " HDD"
-    docker: "broadinstitute/genomes-in-the-cloud:2.3.1-1512499786"
+    docker: "us.gcr.io/broad-dsde-cromwell-dev/centaur/genomes-in-the-cloud:2.3.1-1512499786"
   }
   output {
     File output_vcf = "${output_vcf_name}"
@@ -1576,7 +1576,7 @@ task CollectGvcfCallingMetrics {
     preemptible: preemptible_tries
     memory: "3 GB"
     disks: "local-disk " + sub(disk_size, "\\..*", "") + " HDD"
-    docker: "broadinstitute/genomes-in-the-cloud:2.3.1-1512499786"
+    docker: "us.gcr.io/broad-dsde-cromwell-dev/centaur/genomes-in-the-cloud:2.3.1-1512499786"
   }
   output {
     File summary_metrics = "${metrics_basename}.variant_calling_summary_metrics"
@@ -1614,7 +1614,7 @@ task ConvertToCram {
     memory: "3 GB"
     cpu: "1"
     disks: "local-disk " + sub(disk_size, "\\..*", "") + " HDD"
-    docker: "broadinstitute/genomes-in-the-cloud:2.3.1-1512499786"
+    docker: "us.gcr.io/broad-dsde-cromwell-dev/centaur/genomes-in-the-cloud:2.3.1-1512499786"
   }
   output {
     File output_cram = "${output_basename}.cram"

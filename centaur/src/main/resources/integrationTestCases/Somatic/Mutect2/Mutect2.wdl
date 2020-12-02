@@ -109,7 +109,7 @@ workflow Mutect2 {
     String gatk_docker
     String basic_bash_docker = "ubuntu:16.04"
     String? oncotator_docker
-    String oncotator_docker_or_default = select_first([oncotator_docker, "broadinstitute/oncotator:1.9.6.1"])
+    String oncotator_docker_or_default = select_first([oncotator_docker, "us.gcr.io/broad-dsde-cromwell-dev/centaur/oncotator:1.9.6.1"])
     Int? preemptible_attempts
 
     # Use as a last resort to increase the disk given to every task in case of ill behaving data
@@ -851,7 +851,7 @@ task SumFloats {
     }
 
     runtime {
-        docker: "python:2.7"
+        docker: "us.gcr.io/broad-dsde-cromwell-dev/centaur/python:2.7"
         disks: "local-disk " + 10 + " HDD"
         preemptible: select_first([preemptible_attempts, 10])
     }

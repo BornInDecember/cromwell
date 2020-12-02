@@ -15,7 +15,7 @@ task make_files {
     Array[File] files = ["a/dummy.txt", "a/a.txt", "b/dummy.txt", "b/b.txt", "c/dummy.txt", "c/c.txt"]
   }
   runtime {
-    docker: "marketplace.gcr.io/google/ubuntu1804:latest"
+    docker: "us.gcr.io/broad-dsde-cromwell-dev/centaur/ubuntu:12022020-for-cromwell-tests"
   }
 }
 
@@ -34,7 +34,7 @@ task sanity_check {
     Array[String] lines = read_lines(stdout())
   }
   runtime {
-    docker: "marketplace.gcr.io/google/ubuntu1804:latest"
+    docker: "us.gcr.io/broad-dsde-cromwell-dev/centaur/ubuntu:12022020-for-cromwell-tests"
   }
 }
 
