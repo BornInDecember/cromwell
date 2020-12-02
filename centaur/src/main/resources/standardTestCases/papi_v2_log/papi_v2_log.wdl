@@ -23,14 +23,14 @@ task write_file {
         File out = stdout()
         File written = "written.txt"
     }
-    runtime { docker: "ubuntu@sha256:71cd81252a3563a03ad8daee81047b62ab5d892ebbfbf71cf53415f29c130950" }
+    runtime { docker: "us.gcr.io/broad-dsde-cromwell-dev/centaur/ubuntu@sha256:4e4bc990609ed865e07afc8427c30ffdddca5153fd4e82c20d8f0783a291e241" }
 }
 
 task read_file {
     input { File input_file }
     command { wc -c ~{input_file} }
     output { File out = stdout() }
-    runtime { docker: "ubuntu@sha256:71cd81252a3563a03ad8daee81047b62ab5d892ebbfbf71cf53415f29c130950" }
+    runtime { docker: "us.gcr.io/broad-dsde-cromwell-dev/centaur/ubuntu@sha256:4e4bc990609ed865e07afc8427c30ffdddca5153fd4e82c20d8f0783a291e241" }
 }
 
 task check_log {
@@ -48,7 +48,7 @@ task check_log {
         grep -c 'Starting localization.' log.txt
         grep -c 'Localizing input gs://cloud-cromwell-dev-self-cleaning/cromwell_execution/ci/papi_v2_log/' log.txt
         grep -c 'Done localization.' log.txt
-        grep -c 'Running user action: docker run -v /mnt/local-disk:/cromwell_root --entrypoint=/bin/bash ubuntu@sha256:71cd81252a3563a03ad8daee81047b62ab5d892ebbfbf71cf53415f29c130950 /cromwell_root/script' log.txt
+        grep -c 'Running user action: docker run -v /mnt/local-disk:/cromwell_root --entrypoint=/bin/bash us.gcr.io/broad-dsde-cromwell-dev/centaur/ubuntu@sha256:4e4bc990609ed865e07afc8427c30ffdddca5153fd4e82c20d8f0783a291e241 /cromwell_root/script' log.txt
         grep -c 'Starting delocalization.' log.txt
         grep -c 'Delocalizing output /cromwell_root/written.txt -> gs://cloud-cromwell-dev-self-cleaning/cromwell_execution/ci/papi_v2_log/' log.txt
         grep -c 'Delocalizing output /cromwell_root/stdout -> gs://cloud-cromwell-dev-self-cleaning/cromwell_execution/ci/papi_v2_log/' log.txt

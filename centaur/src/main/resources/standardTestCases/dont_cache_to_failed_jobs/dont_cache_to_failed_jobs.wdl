@@ -4,7 +4,7 @@ task failing_task {
         exit 1
     }
     runtime {
-        docker: "ubuntu@sha256:a0ee7647e24c8494f1cf6b94f1a3cd127f423268293c25d924fbe18fd82db5a4"
+        docker: "us.gcr.io/broad-dsde-cromwell-dev/centaur/ubuntu@sha256:4e4bc990609ed865e07afc8427c30ffdddca5153fd4e82c20d8f0783a291e241"
     }
     output {
         Boolean done = true

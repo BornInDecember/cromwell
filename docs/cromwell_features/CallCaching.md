@@ -159,7 +159,7 @@ If you were to run the same workflow using `ubuntu:latest` now, and again in a y
 This has an even bigger impact when Call Caching is turned on in Cromwell, and could lead to unpredictable behaviors if a tag is updated in the middle of a workflow or even a scatter for example.
 
 In order to ensure perfect reproducibility, Docker provides another way of identifying an image version by using the specific digest of the image, which is an immutable identifier. The digest is guaranteed to be different if 2 images have different byte content. For more information see [Docker's api specs](https://docs.docker.com/registry/spec/api/#/content-digests).
-A docker image can be referenced using the digest (e.g. `ubuntu@sha256:71cd81252a3563a03ad8daee81047b62ab5d892ebbfbf71cf53415f29c130950`).
+A docker image can be referenced using the digest (e.g. `us.gcr.io/broad-dsde-cromwell-dev/centaur/ubuntu@sha256:4e4bc990609ed865e07afc8427c30ffdddca5153fd4e82c20d8f0783a291e241`).
 This image refers to a specific image of ubuntu that does not depend on a floating tag.
 A workflow containing this Docker image run now and a year from now will run in the exact same container.
 

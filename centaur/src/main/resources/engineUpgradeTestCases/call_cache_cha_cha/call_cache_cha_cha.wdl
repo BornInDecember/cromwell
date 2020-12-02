@@ -175,7 +175,7 @@ task make_files {
         Boolean done = true
         File enganadora = "enganadora.txt"
         File alardoso = "alardoso.txt" }
-    runtime { docker: "ubuntu@sha256:71cd81252a3563a03ad8daee81047b62ab5d892ebbfbf71cf53415f29c130950" }
+    runtime { docker: "us.gcr.io/broad-dsde-cromwell-dev/centaur/ubuntu@sha256:4e4bc990609ed865e07afc8427c30ffdddca5153fd4e82c20d8f0783a291e241" }
 }
 
 task modify_file_local {
@@ -193,7 +193,7 @@ task modify_file_local {
     output { Boolean done = true }
     runtime {
         # No docker, we need this to run against the same FS as Cromwell so it can modify the right file!
-        # docker: "ubuntu@sha256:71cd81252a3563a03ad8daee81047b62ab5d892ebbfbf71cf53415f29c130950"
+        # docker: "us.gcr.io/broad-dsde-cromwell-dev/centaur/ubuntu@sha256:4e4bc990609ed865e07afc8427c30ffdddca5153fd4e82c20d8f0783a291e241"
         backend: "Local"
     }
 }
@@ -227,7 +227,7 @@ task read_files {
         Boolean done = true
         String s = read_string("out") }
     runtime {
-        docker: "ubuntu@sha256:71cd81252a3563a03ad8daee81047b62ab5d892ebbfbf71cf53415f29c130950"
+        docker: "us.gcr.io/broad-dsde-cromwell-dev/centaur/ubuntu@sha256:4e4bc990609ed865e07afc8427c30ffdddca5153fd4e82c20d8f0783a291e241"
         continueOnReturnCode: 0
         failOnStderr: false
     }
@@ -241,7 +241,7 @@ task sleep {
     command { sleep ~{duration} }
     output { Boolean done = true }
     runtime {
-        docker: "ubuntu@sha256:71cd81252a3563a03ad8daee81047b62ab5d892ebbfbf71cf53415f29c130950"
+        docker: "us.gcr.io/broad-dsde-cromwell-dev/centaur/ubuntu@sha256:4e4bc990609ed865e07afc8427c30ffdddca5153fd4e82c20d8f0783a291e241"
         continueOnReturnCode: 0
         failOnStderr: false
     }
@@ -260,7 +260,7 @@ task read_copied_files {
         Boolean done = true
         String s = read_string("out") }
     runtime {
-        docker: "ubuntu@sha256:71cd81252a3563a03ad8daee81047b62ab5d892ebbfbf71cf53415f29c130950"
+        docker: "us.gcr.io/broad-dsde-cromwell-dev/centaur/ubuntu@sha256:4e4bc990609ed865e07afc8427c30ffdddca5153fd4e82c20d8f0783a291e241"
         continueOnReturnCode: 0
         failOnStderr: false
     }
@@ -278,7 +278,7 @@ task read_files_swapped {
         Boolean done = true
         String s = read_string("out") }
     runtime {
-        docker: "ubuntu@sha256:71cd81252a3563a03ad8daee81047b62ab5d892ebbfbf71cf53415f29c130950"
+        docker: "us.gcr.io/broad-dsde-cromwell-dev/centaur/ubuntu@sha256:4e4bc990609ed865e07afc8427c30ffdddca5153fd4e82c20d8f0783a291e241"
         continueOnReturnCode: 0
         failOnStderr: false
     }
@@ -300,7 +300,7 @@ task read_files_whitespace {
         Boolean done = true
         String s = read_string("out") }
     runtime {
-        docker: "ubuntu@sha256:71cd81252a3563a03ad8daee81047b62ab5d892ebbfbf71cf53415f29c130950"
+        docker: "us.gcr.io/broad-dsde-cromwell-dev/centaur/ubuntu@sha256:4e4bc990609ed865e07afc8427c30ffdddca5153fd4e82c20d8f0783a291e241"
         continueOnReturnCode: 0
         failOnStderr: false
     }
@@ -323,7 +323,7 @@ task read_files_new_command {
         Boolean done = true
         String s = read_string("out") }
     runtime {
-        docker: "ubuntu@sha256:71cd81252a3563a03ad8daee81047b62ab5d892ebbfbf71cf53415f29c130950"
+        docker: "us.gcr.io/broad-dsde-cromwell-dev/centaur/ubuntu@sha256:4e4bc990609ed865e07afc8427c30ffdddca5153fd4e82c20d8f0783a291e241"
         continueOnReturnCode: 0
         failOnStderr: false
     }
@@ -341,7 +341,7 @@ task read_files_new_output_expressions {
         Boolean done = true
         String s = read_string("out") + "_suffix" }
     runtime {
-        docker: "ubuntu@sha256:71cd81252a3563a03ad8daee81047b62ab5d892ebbfbf71cf53415f29c130950"
+        docker: "us.gcr.io/broad-dsde-cromwell-dev/centaur/ubuntu@sha256:4e4bc990609ed865e07afc8427c30ffdddca5153fd4e82c20d8f0783a291e241"
         continueOnReturnCode: 0
         failOnStderr: false
     }
@@ -359,7 +359,7 @@ task read_files_new_output_names {
         Boolean dunn = true
         String ess = read_string("out") }
     runtime {
-        docker: "ubuntu@sha256:71cd81252a3563a03ad8daee81047b62ab5d892ebbfbf71cf53415f29c130950"
+        docker: "us.gcr.io/broad-dsde-cromwell-dev/centaur/ubuntu@sha256:4e4bc990609ed865e07afc8427c30ffdddca5153fd4e82c20d8f0783a291e241"
         continueOnReturnCode: 0
         failOnStderr: false
     }
@@ -377,7 +377,7 @@ task read_files_inputs_renamed {
         Boolean done = true
         String s = read_string("out") }
     runtime {
-        docker: "ubuntu@sha256:71cd81252a3563a03ad8daee81047b62ab5d892ebbfbf71cf53415f29c130950"
+        docker: "us.gcr.io/broad-dsde-cromwell-dev/centaur/ubuntu@sha256:4e4bc990609ed865e07afc8427c30ffdddca5153fd4e82c20d8f0783a291e241"
         continueOnReturnCode: 0
         failOnStderr: false
     }
@@ -413,7 +413,7 @@ task read_files_different_continueOnReturnCode {
         Boolean done = true
         String s = read_string("out") }
     runtime {
-        docker: "ubuntu@sha256:71cd81252a3563a03ad8daee81047b62ab5d892ebbfbf71cf53415f29c130950"
+        docker: "us.gcr.io/broad-dsde-cromwell-dev/centaur/ubuntu@sha256:4e4bc990609ed865e07afc8427c30ffdddca5153fd4e82c20d8f0783a291e241"
         continueOnReturnCode: false
         failOnStderr: false
     }
@@ -431,7 +431,7 @@ task read_files_different_continueOnReturnCode_2 {
         Boolean done = true
         String s = read_string("out") }
     runtime {
-        docker: "ubuntu@sha256:71cd81252a3563a03ad8daee81047b62ab5d892ebbfbf71cf53415f29c130950"
+        docker: "us.gcr.io/broad-dsde-cromwell-dev/centaur/ubuntu@sha256:4e4bc990609ed865e07afc8427c30ffdddca5153fd4e82c20d8f0783a291e241"
         continueOnReturnCode: [ 0 ]
         failOnStderr: false
     }
@@ -449,7 +449,7 @@ task read_files_without_continueOnReturnCode {
         Boolean done = true
         String s = read_string("out") }
     runtime {
-        docker: "ubuntu@sha256:71cd81252a3563a03ad8daee81047b62ab5d892ebbfbf71cf53415f29c130950"
+        docker: "us.gcr.io/broad-dsde-cromwell-dev/centaur/ubuntu@sha256:4e4bc990609ed865e07afc8427c30ffdddca5153fd4e82c20d8f0783a291e241"
         failOnStderr: false
     }
 }
@@ -466,7 +466,7 @@ task read_files_different_failOnStderr {
         Boolean done = true
         String s = read_string("out") }
     runtime {
-        docker: "ubuntu@sha256:71cd81252a3563a03ad8daee81047b62ab5d892ebbfbf71cf53415f29c130950"
+        docker: "us.gcr.io/broad-dsde-cromwell-dev/centaur/ubuntu@sha256:4e4bc990609ed865e07afc8427c30ffdddca5153fd4e82c20d8f0783a291e241"
         continueOnReturnCode: 0
         failOnStderr: true
     }
@@ -484,7 +484,7 @@ task read_files_without_failOnStderr {
         Boolean done = true
         String s = read_string("out") }
     runtime {
-        docker: "ubuntu@sha256:71cd81252a3563a03ad8daee81047b62ab5d892ebbfbf71cf53415f29c130950"
+        docker: "us.gcr.io/broad-dsde-cromwell-dev/centaur/ubuntu@sha256:4e4bc990609ed865e07afc8427c30ffdddca5153fd4e82c20d8f0783a291e241"
         continueOnReturnCode: 0
     }
 }
@@ -501,7 +501,7 @@ task read_files_failOnStderr_expression {
         Boolean done = true
         String s = read_string("out") }
     runtime {
-        docker: "ubuntu@sha256:71cd81252a3563a03ad8daee81047b62ab5d892ebbfbf71cf53415f29c130950"
+        docker: "us.gcr.io/broad-dsde-cromwell-dev/centaur/ubuntu@sha256:4e4bc990609ed865e07afc8427c30ffdddca5153fd4e82c20d8f0783a291e241"
         continueOnReturnCode: 0
         failOnStderr: !ready
     }
@@ -519,7 +519,7 @@ task read_array_files {
         Boolean done = true
         String s = read_string("out") }
     runtime {
-        docker: "ubuntu@sha256:71cd81252a3563a03ad8daee81047b62ab5d892ebbfbf71cf53415f29c130950"
+        docker: "us.gcr.io/broad-dsde-cromwell-dev/centaur/ubuntu@sha256:4e4bc990609ed865e07afc8427c30ffdddca5153fd4e82c20d8f0783a291e241"
         continueOnReturnCode: 0
         failOnStderr: !ready
     }

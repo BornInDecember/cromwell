@@ -3,7 +3,7 @@ task make_file {
         echo woohoo > out.txt
     }
     runtime {
-        docker: "ubuntu@sha256:71cd81252a3563a03ad8daee81047b62ab5d892ebbfbf71cf53415f29c130950"
+        docker: "us.gcr.io/broad-dsde-cromwell-dev/centaur/ubuntu@sha256:4e4bc990609ed865e07afc8427c30ffdddca5153fd4e82c20d8f0783a291e241"
     }
     output {
         File out = "out.txt"
